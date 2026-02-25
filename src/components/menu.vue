@@ -1,11 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Router } from 'lucide-vue-next';
+</script>
 
 <template>
      <div class="containerMenu">
           <h1 class="titleMenu">User Dashboard</h1>
 
           <ul class="menu">
-               <li class="itemMenu">Home</li>
+               <li class="itemMenu">
+                    <RouterLink to="/">Home</RouterLink>
+               </li>
           </ul>
      </div>
 </template>
