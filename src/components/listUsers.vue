@@ -1,17 +1,24 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { onMounted } from 'vue';
+import { useUsersStore } from '@/stores/users.store';
+
+const store = useUsersStore();
+
+onMounted(() => {
+     console.log('O componente apareceu! Buscando usuários...');
+     store.loadUsers();
+});
+</script>
 
 <template>
      <div class="containerListUsers">
           <ul class="listUsers">
-               <li class="Users">
+               <li class="Users" v-for="user in store.filteredUsers">
                     <div class="infoUser">
-                         <img
-                              src="https://randomuser.me/api/portraits/women/27.jpg"
-                              class="imageUser"
-                         />
+                         <img :src="user.picture.large" class="imageUser" />
                          <div>
-                              <h1 class="nameUser">John Doe</h1>
-                              <p class="emailUser">jdoe@me.com</p>
+                              <h1 class="nameUser">{{ user.name.first }} {{ user.name.last }}</h1>
+                              <p class="emailUser">{{ user.email }}</p>
                          </div>
                     </div>
 
