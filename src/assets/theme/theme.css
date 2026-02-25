@@ -19,3 +19,14 @@ body {
      background-color: var(--color-primary);
      font-family: var(--font-primary);
 }
+
+.container {
+     width: 100%;
+     padding: 14px 18px;
+}
+
+.title {
+     color: var(--color-secondary);
+     font-size: 32px;
+     font-weight: bold;
+}
