@@ -1,4 +1,5 @@
 export type User = {
+     gender: string;
      login: {
           uuid: string;
      };

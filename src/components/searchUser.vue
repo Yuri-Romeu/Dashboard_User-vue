@@ -1,5 +1,18 @@
 <script setup lang="ts">
 import { Search } from 'lucide-vue-next';
+import { useUsersStore } from '@/stores/users.store';
+
+const store = useUsersStore();
+
+const handleSearchInput = (event: Event) => {
+     const target = event.target as HTMLInputElement | null;
+     store.setSearch(target?.value ?? '');
+};
+
+const handleGenderChange = (event: Event) => {
+     const target = event.target as HTMLSelectElement | null;
+     store.setGender(target?.value ?? 'all');
+};
 </script>
 
 <template>
@@ -12,11 +25,16 @@ import { Search } from 'lucide-vue-next';
                     :color="'rgba(128, 128, 128, 0.8)'"
                     :size="20"
                />
-               <input class="inputSearchUser" type="text" placeholder="Search users..." />
+               <input
+                    class="inputSearchUser"
+                    type="text"
+                    placeholder="Search users..."
+                    @input="handleSearchInput"
+               />
           </div>
 
           <div class="filter">
-               <select>
+               <select @change="handleGenderChange">
                     <option value="all">All</option>
                     <option value="female">Female</option>
                     <option value="male">Male</option>
