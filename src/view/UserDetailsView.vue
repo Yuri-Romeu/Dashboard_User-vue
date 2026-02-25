@@ -1,13 +1,14 @@
 <script setup lang="ts">
+import UserDetail from '@/components/userDetail.vue';
 import { useRoute } from 'vue-router';
 
 const router = useRoute();
 
-const id = router.params.id;
+const idUser = router.params.id;
 </script>
 
 <template>
-     <h1>Detalhes do Usuário: {{ id }}</h1>
+     <h1 class="title">User Details</h1>
 </template>
 
 <style scoped></style>
