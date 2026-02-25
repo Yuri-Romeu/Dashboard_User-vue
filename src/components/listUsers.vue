@@ -1,13 +1,20 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { useUsersStore } from '@/stores/users.store';
+import { useRouter } from 'vue-router';
+import { User } from '@/types/user';
 
 const store = useUsersStore();
+const router = useRouter();
 
 onMounted(() => {
      console.log('O componente apareceu! Buscando usuários...');
      store.loadUsers();
 });
+
+function handleViewDetails(user: User) {
+     router.push(`/users/${user.login.uuid}`);
+}
 </script>
 
 <template>
@@ -22,7 +29,7 @@ onMounted(() => {
                          </div>
                     </div>
 
-                    <button class="button">View Details</button>
+                    <button class="button" @click="handleViewDetails(user)">View Details</button>
                </li>
           </ul>
      </div>

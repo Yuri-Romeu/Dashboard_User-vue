@@ -8,7 +8,7 @@ import { Router } from 'lucide-vue-next';
 
           <ul class="menu">
                <li class="itemMenu">
-                    <RouterLink to="/">Home</RouterLink>
+                    <RouterLink to="/" style="all: unset">Home</RouterLink>
                </li>
           </ul>
      </div>
