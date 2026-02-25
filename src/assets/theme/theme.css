@@ -1,0 +1,21 @@
+:root {
+     /* Colors */
+     --color-primary: #f3f5f8;
+     --color-secondary: #2a5084;
+     --color-tertiary: #2c7acb;
+     --color-quaternary: #111016;
+
+     /* Fonts */
+     --font-primary: 'Inter', sans-serif;
+}
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+     background-color: var(--color-primary);
+     font-family: var(--font-primary);
+}
