@@ -8,7 +8,7 @@ const store = useUsersStore();
 const router = useRouter();
 
 onMounted(() => {
-     console.log('O componente apareceu! Buscando usuários...');
+     console.log('O componente apareceu! Buscando usu�rios...');
      store.loadUsers();
 });
 
@@ -19,8 +19,13 @@ function handleViewDetails(user: User) {
 
 <template>
      <div class="containerListUsers">
-          <ul class="listUsers">
-               <li class="Users" v-for="user in store.filteredUsers">
+          <div v-if="store.loading" class="loadingState">
+               <div class="spinner" />
+               <p>Carregando usuarios...</p>
+          </div>
+
+          <ul v-else class="listUsers">
+               <li class="Users" v-for="user in store.filteredUsers" :key="user.login.uuid">
                     <div class="infoUser">
                          <img :src="user.picture.large" class="imageUser" />
                          <div>
@@ -38,6 +43,28 @@ function handleViewDetails(user: User) {
 <style scoped>
 .containerListUsers {
      margin-top: 10px;
+}
+
+.loadingState {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     color: var(--color-secondary);
+}
+
+.spinner {
+     width: 20px;
+     height: 20px;
+     border-radius: 50%;
+     border: 3px solid rgba(42, 80, 132, 0.2);
+     border-top-color: var(--color-tertiary);
+     animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+     to {
+          transform: rotate(360deg);
+     }
 }
 
 .listUsers {
