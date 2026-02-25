@@ -2,6 +2,8 @@ export type User = {
      gender: string;
      login: {
           uuid: string;
+          username: string;
+          password: string;
      };
      name: {
           title: string;
@@ -20,5 +22,6 @@ export type User = {
           state: string;
           country: string;
      };
+     phone: string;
      email: string;
 };

@@ -7,17 +7,16 @@ defineProps<{
      country: string;
      state: string;
      gender: string;
+     phone: string;
+     username: string;
+     password: string;
 }>();
 </script>
 
 <template>
      <div class="containerUserDetail">
           <div class="profile">
-               <img
-                    src="https://randomuser.me/api/portraits/women/67.jpg"
-                    alt=""
-                    class="profileImage"
-               />
+               <img :src="imagem" alt="" class="profileImage" />
 
                <div class="profileInfo">
                     <h1>{{ name }}</h1>
@@ -44,6 +43,21 @@ defineProps<{
                <li>
                     <span class="label">Gender:</span>
                     <span class="value">{{ gender }}</span>
+               </li>
+
+               <li>
+                    <span class="label">Phone:</span>
+                    <span class="value">{{ phone }}</span>
+               </li>
+
+               <li>
+                    <span class="label">Username:</span>
+                    <span class="value">{{ username }}</span>
+               </li>
+
+               <li>
+                    <span class="label">Password:</span>
+                    <span class="value">{{ password }}</span>
                </li>
           </ul>
      </div>
