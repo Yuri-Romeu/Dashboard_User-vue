@@ -1,9 +1,10 @@
 <script setup>
-const name = 'Yuri';
+// importações
+import Menu from './components/menu.vue';
 </script>
 
 <template>
-     <h1>Dashboard User - {{ name }}</h1>
+     <Menu />
 </template>
 
 <style scoped>
