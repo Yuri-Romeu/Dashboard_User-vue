@@ -47,7 +47,7 @@ import { Search } from 'lucide-vue-next';
      padding: 12px 16px 12px 42px;
      margin: 10px 0;
      border-radius: 4px;
-     border: 1px solid rgba(128, 128, 128, 0.356);
+     border: 1px solid var(--color-quinary);
 
      &::placeholder {
           color: rgba(128, 128, 128, 0.8);
@@ -61,6 +61,6 @@ import { Search } from 'lucide-vue-next';
 select {
      padding: 4px 7px;
      border-radius: 4px;
-     border: 1px solid rgba(128, 128, 128, 0.356);
+     border: 1px solid var(--color-quinary);
 }
 </style>

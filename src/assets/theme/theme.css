@@ -4,6 +4,7 @@
      --color-secondary: #2a5084;
      --color-tertiary: #2c7acb;
      --color-quaternary: #111016;
+     --color-quinary: rgba(128, 128, 128, 0.356);
 
      /* Fonts */
      --font-primary: 'Inter', sans-serif;

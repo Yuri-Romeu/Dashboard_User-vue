@@ -2,6 +2,7 @@
 // importações
 import Menu from './components/menu.vue';
 import SearchUser from './components/searchUser.vue';
+import ListUsers from './components/listUsers.vue';
 </script>
 
 <template>
@@ -9,6 +10,8 @@ import SearchUser from './components/searchUser.vue';
 
      <div class="container">
           <SearchUser />
+
+          <ListUsers />
      </div>
 </template>
 
