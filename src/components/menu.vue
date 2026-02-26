@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import { Router } from 'lucide-vue-next';
-</script>
+<script setup lang="ts"></script>
 
 <template>
      <div class="containerMenu">
@@ -21,6 +19,7 @@ import { Router } from 'lucide-vue-next';
      display: flex;
      align-items: center;
      justify-content: space-between;
+     gap: 12px;
      background-color: var(--color-secondary);
 }
 
@@ -44,6 +43,31 @@ import { Router } from 'lucide-vue-next';
 
      &:hover {
           text-decoration: underline;
+     }
+}
+
+@media (max-width: 768px) {
+     .containerMenu {
+          padding: 12px 14px;
+     }
+
+     .titleMenu {
+          font-size: 20px;
+     }
+
+     .itemMenu {
+          margin: 0;
+     }
+}
+
+@media (max-width: 480px) {
+     .containerMenu {
+          flex-direction: column;
+          align-items: flex-start;
+     }
+
+     .titleMenu {
+          font-size: 18px;
      }
 }
 </style>

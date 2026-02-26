@@ -68,8 +68,8 @@ defineProps<{
      background-color: #fff;
      border: 1px solid var(--color-quinary);
      border-radius: 2px;
-     width: 40%;
-     height: 30%;
+     width: 100%;
+     max-width: 720px;
      margin: 10px 0;
 }
 
@@ -95,11 +95,13 @@ defineProps<{
 .profileInfo h1 {
      color: var(--color-secondary);
      font-size: 26px;
+     word-break: break-word;
 }
 
 .profileInfo p {
      color: var(--color-quaternary);
      font-size: 16px;
+     word-break: break-word;
 }
 
 .userDetails {
@@ -109,6 +111,7 @@ defineProps<{
 
 .userDetails li {
      display: flex;
+     flex-wrap: wrap;
      gap: 8px;
      padding: 10px;
      border-top: 1px solid var(--color-quinary);
@@ -122,5 +125,31 @@ defineProps<{
 .value {
      color: var(--color-quaternary);
      font-weight: 400;
+     word-break: break-word;
+}
+
+@media (max-width: 480px) {
+     .profile {
+          padding: 12px;
+          align-items: flex-start;
+     }
+
+     .profileImage {
+          width: 56px;
+          height: 56px;
+          margin-right: 10px;
+     }
+
+     .profileInfo h1 {
+          font-size: 20px;
+     }
+
+     .profileInfo p {
+          font-size: 14px;
+     }
+
+     .userDetails {
+          padding: 12px;
+     }
 }
 </style>

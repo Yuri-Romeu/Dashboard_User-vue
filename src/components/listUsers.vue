@@ -8,7 +8,7 @@ const store = useUsersStore();
 const router = useRouter();
 
 onMounted(() => {
-     console.log('O componente apareceu! Buscando usu�rios...');
+     console.log('O componente apareceu! Buscando usuarios...');
      store.loadUsers();
 });
 
@@ -72,8 +72,9 @@ function handleViewDetails(user: User) {
 }
 
 .Users {
-     margin: 14px 0;
-     width: 40%;
+     margin: 18px 0;
+     width: 100%;
+     max-width: 720px;
      padding: 10px 12px;
      border-radius: 2px;
      border: 1px solid var(--color-quinary);
@@ -117,5 +118,38 @@ function handleViewDetails(user: User) {
      border: none;
      font-weight: 600;
      cursor: pointer;
+}
+
+@media (max-width: 768px) {
+     .Users {
+          max-width: 100%;
+     }
+}
+
+@media (max-width: 480px) {
+     .Users {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 12px;
+     }
+
+     .infoUser {
+          width: 100%;
+          gap: 12px;
+          align-items: center;
+     }
+
+     .nameUser {
+          font-size: 15px;
+     }
+
+     .emailUser {
+          font-size: 13px;
+          word-break: break-word;
+     }
+
+     .button {
+          width: 100%;
+     }
 }
 </style>

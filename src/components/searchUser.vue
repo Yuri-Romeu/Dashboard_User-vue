@@ -61,7 +61,8 @@ const handleGenderChange = (event: Event) => {
 }
 
 .inputSearchUser {
-     width: 40%;
+     width: 100%;
+     max-width: 480px;
      padding: 12px 16px 12px 42px;
      margin: 10px 0;
      border-radius: 4px;
@@ -80,5 +81,26 @@ select {
      padding: 4px 7px;
      border-radius: 4px;
      border: 1px solid var(--color-quinary);
+}
+
+@media (max-width: 480px) {
+     .searchUserContantIcon {
+          left: 10px;
+     }
+
+     .inputSearchUser {
+          max-width: 100%;
+          padding: 11px 14px 11px 38px;
+          font-size: 14px;
+     }
+
+     .filter {
+          margin: 6px 0 0;
+     }
+
+     select {
+          width: 100%;
+          max-width: 220px;
+     }
 }
 </style>

@@ -23,6 +23,8 @@ body {
 
 .container {
      width: 100%;
+     max-width: 1200px;
+     margin: 0 auto;
      padding: 14px 18px;
 }
 
@@ -30,4 +32,24 @@ body {
      color: var(--color-secondary);
      font-size: 32px;
      font-weight: bold;
+}
+
+@media (max-width: 768px) {
+     .container {
+          padding: 12px 14px;
+     }
+
+     .title {
+          font-size: 26px;
+     }
+}
+
+@media (max-width: 480px) {
+     .container {
+          padding: 10px 12px;
+     }
+
+     .title {
+          font-size: 22px;
+     }
 }

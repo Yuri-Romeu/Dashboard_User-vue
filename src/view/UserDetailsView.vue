@@ -53,5 +53,12 @@ onMounted(() => {
      border: none;
      font-weight: 600;
      cursor: pointer;
+     max-width: 720px;
+}
+
+@media (max-width: 480px) {
+     .button {
+          width: 100%;
+     }
 }
 </style>
