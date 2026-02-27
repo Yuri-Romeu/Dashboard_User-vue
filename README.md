@@ -154,3 +154,7 @@ npm run cypress:run -- --spec src/tests/e2e/users.cy.ts
 ## Autor
 
 Projeto desenvolvido por **Yuri Romeu**.
+
+## ⚠️ Atenção
+
+_Caso a API esteja instável, os dados podem não carregar corretamente._
